@@ -1,0 +1,24 @@
+{
+    "manifest_version": 2,
+    "name": "Stop Smooth Scrolling",
+    "version": "0.1",
+
+    "description": "Stop smooth scrolling",
+    "icons": {
+        "128": "mouse_wheel-128.png"
+    },
+
+    "content_scripts": [
+        {
+            "matches": ["*://*/*"],
+            "js": ["content.js"],
+            "run_at": "document_start"
+        }
+    ],
+    "options_page": "options.html",
+    "permissions": [
+        "http://*/*",
+        "https://*/*",
+        "storage"
+    ]
+}
