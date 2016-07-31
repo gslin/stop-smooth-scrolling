@@ -15,14 +15,23 @@
         methods: {
             addHostname: function() {
                 var h = this.new_hostname.trim();
-                if (-1 === this.whitelist_hosts.indexOf(h)) {
-                    this.whitelist_hosts.push(h);
-
-                    var that = this;
-                    chrome.storage.sync.set({
-                        whitelist_hosts: that.whitelist_hosts,
-                    });
+                if ('' === h) {
+                    alert('Empty hostname is not acceptable');
+                    return;
                 }
+
+                if (-1 !== this.whitelist_hosts.indexOf(h)) {
+                    alert(h + ' already exists');
+                    return;
+                }
+
+                this.whitelist_hosts.push(h);
+
+                var that = this;
+                chrome.storage.sync.set({
+                    whitelist_hosts: that.whitelist_hosts,
+                });
+
                 this.new_hostname = '';
             },
             deleteHostname: function(idx) {
