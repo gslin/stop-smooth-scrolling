@@ -4,6 +4,11 @@
 <title>Stop Smooth Scrolling - Options</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link href="bootstrap-3.3.7.min.css" rel="stylesheet">
+<style type="text/css">
+.table tbody > tr > td {
+    vertical-align: middle;
+}
+</style>
 </head>
 <body>
 <div class="container">
@@ -11,6 +16,23 @@
 <div id="app">
     <h2>Whitelist</h2>
     <p>Setup whitelist hosts to stop blocking.</p>
+
+    <table class="table table-bordered table-condensed table-striped">
+        <thead>
+            <tr><th>Hostname</th><th>Action</th></tr>
+        </thead>
+        <tbody>
+            <tr v-for="host in whitelist_hosts">
+                <td>{{ host }}</td>
+                <td><button class="btn">Delete</button></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="form-group">
+        <label for="new_hostname">Add new hostname</label>
+        <input autofocus="autofocus" class="form-control" id="new_hostname" placeholder="Hostname" type="text">
+    </div>
 </div>
 
 <footer>
