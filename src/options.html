@@ -33,6 +33,10 @@
         <label for="new_hostname">Add new hostname</label>
         <input autofocus="autofocus" class="form-control" id="new_hostname" placeholder="Hostname" type="text" v-model="new_hostname" v-on:keyup.enter="addHostname">
     </div>
+
+    <div class="form-group">
+        <button class="btn btn-danger" v-on:click="resetToDefault">Reset to default</button>
+    </div>
 </div>
 
 <footer>
