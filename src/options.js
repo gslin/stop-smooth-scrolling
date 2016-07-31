@@ -5,6 +5,7 @@
         'www.bing.com',                 // Bing Maps
         'www.google.com',               // Google Maps
         'www.openstreetmap.org',        // OpenStreetMaps
+        'www.plurk.com',                // Plurk
     ];
 
     new Vue({
