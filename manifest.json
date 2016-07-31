@@ -11,11 +11,11 @@
     "content_scripts": [
         {
             "matches": ["*://*/*"],
-            "js": ["content.js"],
+            "js": ["src/content.js"],
             "run_at": "document_start"
         }
     ],
-    "options_page": "options.html",
+    "options_page": "src/options.html",
     "permissions": [
         "http://*/*",
         "https://*/*",
