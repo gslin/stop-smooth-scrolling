@@ -43,6 +43,11 @@
                 });
             },
             resetToDefault: function() {
+                var yn = confirm('Reset all whitelist settings?');
+                if (!yn) {
+                    return;
+                }
+
                 this.whitelist_hosts = default_whitelist_hosts;
 
                 var that = this;
