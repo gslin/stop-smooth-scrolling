@@ -4,7 +4,9 @@
     new Vue({
         el: '#app',
         data: {
-            whitelist_hosts: [],
+            whitelist_hosts: [
+                'www.google.com',       // Google Maps
+            ],
         },
         methods: {
             addHostname: function() {
