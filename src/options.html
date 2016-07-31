@@ -24,7 +24,7 @@
         <tbody>
             <tr v-for="host in whitelist_hosts">
                 <td>{{ host }}</td>
-                <td><button class="btn">Delete</button></td>
+                <td><button class="btn" v-on:click="deleteHostname($index)">Delete</button></td>
             </tr>
         </tbody>
     </table>
