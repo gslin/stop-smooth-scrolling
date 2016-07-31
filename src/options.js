@@ -15,6 +15,6 @@
             deleteHostname: function(idx) {
                 this.whitelist_hosts.splice(idx, 1);
             },
-        }
+        },
     });
 })();
