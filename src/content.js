@@ -1,12 +1,18 @@
 'use strict';
 
 (function(){
-    var whitelist_hosts = ['www.google.com'];
+    var p = new Promise(function(resolve) {
+        chrome.storage.sync.get({
+            whitelist_hosts: [],
+        }, function(items) {
+            if (-1 !== items.whitelist_hosts.indexOf(document.location.hostname)) {
+                return;
+            }
+            resolve();
+        });
+    });
 
-    if (-1 !== whitelist_hosts.indexOf(document.location.hostname)) {
-        return;
-    }
-
+    p.then(function() {
     document.addEventListener('DOMContentLoaded', function(){
         [document, window].forEach(function(target){
             ['mousewheel', 'wheel'].forEach(function(eventName){
@@ -25,5 +31,6 @@
                 }
             }, true);
         });
+    });
     });
 })();
