@@ -5,7 +5,7 @@ Stop smooth scrolling while website using JavaScript to emulate it.
 
 Install
 =======
-https://chrome.google.com/webstore/detail/dolloijeimbmocbhcjglaobngibnhfij
+https://chrome.google.com/webstore/detail/stop-smooth-scrolling/dolloijeimbmocbhcjglaobngibnhfij
 
 How it works
 ============
