@@ -7,10 +7,10 @@ Install
 =======
 https://chrome.google.com/webstore/detail/dolloijeimbmocbhcjglaobngibnhfij
 
-How
-===
+How it works
+============
 
-We use `addEventListener()` with `useCapture` flag, then `preventDefault()` to avoid initialization of smooth scrolling.  It should be able to block almost all cases.
+Use `addEventListener()` with `useCapture` flag, then `preventDefault()` to avoid initialization of smooth scrolling.  It should be able to block almost all cases.
 
 License
 -------
