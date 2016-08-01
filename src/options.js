@@ -4,6 +4,7 @@
     var default_whitelist_hosts = [
         'www.bing.com',                 // Bing Maps
         'www.google.com',               // Google Maps
+        'www.netflix.com',              // Netflix
         'www.openstreetmap.org',        // OpenStreetMaps
         'www.plurk.com',                // Plurk
     ];
