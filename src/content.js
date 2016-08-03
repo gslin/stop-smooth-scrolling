@@ -23,9 +23,9 @@
 
                 target.addEventListener('keydown', function(event){
                     /*
-                     * Don't block keydown event in textarea.
+                     * Don't block keydown event in input & textarea.
                      */
-                    if (document.activeElement && 'textarea' === document.activeElement.tagName.toLowerCase()) {
+                    if (document.activeElement && -1 !== ['input', 'textarea'].indexOf(document.activeElement.tagName.toLowerCase())) {
                         return;
                     }
 
