@@ -2,6 +2,7 @@
 
 (function() {
     var default_whitelist_hosts = [
+        'docs.google.com',              // Google Docs
         'mail.google.com',              // Gmail
         'www.bing.com',                 // Bing Maps
         'www.google.com',               // Google Maps
