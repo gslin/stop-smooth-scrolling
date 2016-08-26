@@ -14,12 +14,22 @@
 
     p.then(function() {
         document.addEventListener('DOMContentLoaded', function(){
+            /*
+             * If known map service is loaded, then ignore mouse wheel blocking.
+             */
+            var mapEnabled = false;
+            if (document.querySelector('script[src^="https://maps.google"], script[src^="//maps.google"]')) {
+                mapEnabled = true;
+            }
+
             [document, window].forEach(function(target){
-                ['mousewheel', 'wheel'].forEach(function(eventName){
-                    target.addEventListener(eventName, function(e){
-                        e.stopPropagation();
-                    }, true);
-                });
+                if (!mapEnabled) {
+                    ['mousewheel', 'wheel'].forEach(function(eventName){
+                        target.addEventListener(eventName, function(e){
+                            e.stopPropagation();
+                        }, true);
+                    });
+                }
 
                 target.addEventListener('keydown', function(event){
                     /*
