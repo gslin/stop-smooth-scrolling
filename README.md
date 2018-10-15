@@ -16,4 +16,4 @@ Use `addEventListener()` with `useCapture` flag, then `preventDefault()` to avoi
 License
 -------
 
-The BSD 3-Clause License.  Please read LICENSE file.
+The BSD 3-Clause License.  Please read [LICENSE](LICENSE) file.
