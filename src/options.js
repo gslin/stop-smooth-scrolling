@@ -3,6 +3,7 @@
 (function() {
     var default_whitelist_hosts = [
         'mail.google.com',              // Gmail
+        'slack.com',                    // Slack
         'www.bing.com',                 // Bing Maps
         'www.google.com',               // Google Maps
         'www.netflix.com',              // Netflix
