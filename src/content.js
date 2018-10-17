@@ -5,9 +5,16 @@
         chrome.storage.sync.get({
             whitelist_hosts: [],
         }, function(items) {
-            if (-1 !== items.whitelist_hosts.indexOf(document.location.hostname)) {
-                return;
+            let cnt = items.whitelist_hosts.length;
+            for (let i = 0; i < cnt; i++) {
+                if (document.location.hostname === items.whitelist_hosts[i]) {
+                    return;
+                }
+                if (document.location.hostname.endsWith(items.whitelist_hosts[i])) {
+                    return;
+                }
             }
+
             resolve();
         });
     });
