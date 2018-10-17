@@ -7,10 +7,11 @@
         }, function(items) {
             let cnt = items.whitelist_hosts.length;
             for (let i = 0; i < cnt; i++) {
-                if (document.location.hostname === items.whitelist_hosts[i]) {
+                let h = items.whitelist_hosts[i];
+                if (document.location.hostname === h) {
                     return;
                 }
-                if (document.location.hostname.endsWith(items.whitelist_hosts[i])) {
+                if (h.startsWith('.') && document.location.hostname.endsWith(h)) {
                     return;
                 }
             }
