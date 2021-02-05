@@ -2,6 +2,7 @@
 
 (function() {
     var default_whitelist_hosts = [
+        'docs.google.com',              // Google Docs
         'mail.google.com',              // Gmail
         '.slack.com',                   // Slack
         'www.bing.com',                 // Bing Maps
