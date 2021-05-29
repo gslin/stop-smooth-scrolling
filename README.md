@@ -1,6 +1,6 @@
 # Stop Smooth Scrolling
 
-Stop smooth scrolling while website using JavaScript to emulate it.
+Stop smooth scrolling that websites try to simulate by JavaScript.
 
 ## Install
 
@@ -8,7 +8,7 @@ Stop smooth scrolling while website using JavaScript to emulate it.
 
 ## How it works
 
-Use `addEventListener()` with `useCapture` flag, then `preventDefault()` to avoid initialization of smooth scrolling.  It should be able to block almost all cases, but you can set whitelist if it does not work.
+Use `addEventListener()` with `useCapture` flag, then `preventDefault()` to avoid from the initialization of smooth scrolling.  This should be working to block almost all cases, but you can add into allowlist if it does not work.
 
 ## License
 
