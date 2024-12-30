@@ -1,11 +1,11 @@
 'use strict';
 
 (function(){
-  var p = new Promise(function(resolve) {
+  const p = new Promise(function(resolve) {
     chrome.storage.sync.get({
       whitelist_hosts: [],
     }, function(items) {
-      let cnt = items.whitelist_hosts.length;
+      const cnt = items.whitelist_hosts.length;
       for (let i = 0; i < cnt; i++) {
         let h = items.whitelist_hosts[i];
         if (document.location.hostname === h) {
