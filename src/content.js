@@ -1,13 +1,11 @@
 'use strict';
 
-(function(){
+(() => {
   const p = new Promise(function(resolve) {
     chrome.storage.sync.get({
       whitelist_hosts: [],
-    }, function(items) {
-      const cnt = items.whitelist_hosts.length;
-      for (let i = 0; i < cnt; i++) {
-        let h = items.whitelist_hosts[i];
+    }, items => {
+      for (const h of items.whitelist_hosts) {
         if (document.location.hostname === h) {
           return;
         }
@@ -20,16 +18,16 @@
     });
   });
 
-  p.then(function() {
-    document.addEventListener('DOMContentLoaded', function(){
-      [document, window].forEach(function(target){
-        ['mousewheel', 'wheel'].forEach(function(eventName){
-          target.addEventListener(eventName, function(e){
+  p.then(() => {
+    document.addEventListener('DOMContentLoaded', () => {
+      [document, window].forEach(target => {
+        ['mousewheel', 'wheel'].forEach(eventName => {
+          target.addEventListener(eventName, e => {
             e.stopPropagation();
           }, true);
         });
 
-        target.addEventListener('keydown', function(event){
+        target.addEventListener('keydown', event => {
           /*
            * Don't block keydown event in input & textarea.
            */
