@@ -38,7 +38,7 @@
           }
 
           /*
-           * 32 space, 33 pageup, 34 pagedown, 35 end, 36 home, 38 up, 40 down
+           * 32 space, 33 pageup, 34 pagedown, 35 end, 36 home, 38 up, 40 down.
            */
           if (-1 !== [32, 33, 34, 35, 36, 38, 40].indexOf(event.which)) {
             event.stopPropagation();
