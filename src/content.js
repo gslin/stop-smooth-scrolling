@@ -31,7 +31,7 @@
           /*
            * Don't block keydown event in input & textarea.
            */
-          if (document.activeElement && -1 !== ['input', 'textarea'].indexOf(document.activeElement.tagName.toLowerCase())) {
+          if (document.activeElement && ['input', 'textarea'].includes(document.activeElement.tagName.toLowerCase())) {
             return;
           }
 
