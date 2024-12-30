@@ -6,10 +6,10 @@
 <link href="bootstrap-3.3.7.min.css" rel="stylesheet">
 <style type="text/css">
 .table tbody > tr > td {
-    vertical-align: middle;
+  vertical-align: middle;
 }
 .table-nonfluid {
-    width: auto;
+  width: auto;
 }
 </style>
 </head>
@@ -17,29 +17,29 @@
 <div class="container">
 
 <div id="app">
-    <h2>Whitelist</h2>
-    <p>Setup whitelist hosts to stop blocking.</p>
+  <h2>Whitelist</h2>
+  <p>Setup whitelist hosts to stop blocking.</p>
 
-    <table class="table table-bordered table-condensed table-nonfluid table-striped">
-        <thead>
-            <tr><th>Hostname</th><th>Action</th></tr>
-        </thead>
-        <tbody>
-            <tr v-for="host in whitelist_hosts">
-                <td>{{ host }}</td>
-                <td><button class="btn" v-on:click="deleteHostname($index)">Delete</button></td>
-            </tr>
-        </tbody>
-    </table>
+  <table class="table table-bordered table-condensed table-nonfluid table-striped">
+    <thead>
+      <tr><th>Hostname</th><th>Action</th></tr>
+    </thead>
+    <tbody>
+      <tr v-for="host in whitelist_hosts">
+        <td>{{ host }}</td>
+        <td><button class="btn" v-on:click="deleteHostname($index)">Delete</button></td>
+      </tr>
+    </tbody>
+  </table>
 
-    <div class="form-group">
-        <label for="new_hostname">Add new hostname</label>
-        <input autofocus="autofocus" class="form-control" id="new_hostname" placeholder="Hostname" type="text" v-model="new_hostname" v-on:keyup.enter="addHostname">
-    </div>
+  <div class="form-group">
+    <label for="new_hostname">Add new hostname</label>
+    <input autofocus="autofocus" class="form-control" id="new_hostname" placeholder="Hostname" type="text" v-model="new_hostname" v-on:keyup.enter="addHostname">
+  </div>
 
-    <div class="form-group">
-        <button class="btn btn-danger" v-on:click="resetToDefault">Reset to default</button>
-    </div>
+  <div class="form-group">
+    <button class="btn btn-danger" v-on:click="resetToDefault">Reset to default</button>
+  </div>
 </div>
 
 <footer>
