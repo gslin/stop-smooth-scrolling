@@ -1,15 +1,15 @@
 'use strict';
 
 (function() {
-  var default_whitelist_hosts = [
-    'docs.google.com',              // Google Docs
-    'mail.google.com',              // Gmail
-    '.slack.com',                   // Slack
-    'www.bing.com',                 // Bing Maps
-    'www.google.com',               // Google Maps
-    'www.netflix.com',              // Netflix
-    'www.openstreetmap.org',        // OpenStreetMaps
-    'www.plurk.com',                // Plurk
+  const default_whitelist_hosts = [
+    '.slack.com',                       // Slack
+    'docs.google.com',                  // Google Docs
+    'mail.google.com',                  // Gmail
+    'www.bing.com',                     // Bing Maps
+    'www.google.com',                   // Google Maps
+    'www.netflix.com',                  // Netflix
+    'www.openstreetmap.org',            // OpenStreetMaps
+    'www.plurk.com',                    // Plurk
   ];
 
   new Vue({
