@@ -2,6 +2,7 @@
 
 (function() {
   const default_whitelist_hosts = [
+    '.figma.com',                       // Figma
     '.slack.com',                       // Slack
     'docs.google.com',                  // Google Docs
     'mail.google.com',                  // Gmail
