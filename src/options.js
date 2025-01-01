@@ -4,6 +4,7 @@
   const default_whitelist_hosts = [
     '.figma.com',                       // Figma
     '.slack.com',                       // Slack
+    'bazqux.com',                       // Bazqux
     'docs.google.com',                  // Google Docs
     'mail.google.com',                  // Gmail
     'www.bing.com',                     // Bing Maps
