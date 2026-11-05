@@ -5,11 +5,17 @@
     chrome.storage.sync.get({
       whitelist_hosts: [],
     }, items => {
+      const host = document.location.hostname;
+      const full = host + document.location.pathname;
       for (const h of items.whitelist_hosts) {
-        if (document.location.hostname === h) {
-          return;
-        }
-        if (h.startsWith('.') && document.location.hostname.endsWith(h)) {
+        if (h.includes('/')) {
+          /**
+           * Match the domain name and path prefix e.g. `www.example.com/path`
+           */
+          if (full.startsWith(h)) {
+            return;
+          }
+        } else if (host === h || (h.startsWith('.') && host.endsWith(h))) {
           return;
         }
       }
