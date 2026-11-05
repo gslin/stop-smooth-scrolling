@@ -29,9 +29,14 @@
 
         target.addEventListener('keydown', event => {
           /*
-           * Don't block keydown event in input & textarea.
+           * Don't block keydown event in input, textarea, select, or content-editable elements
            */
-          if (document.activeElement && ['input', 'textarea'].includes(document.activeElement.tagName.toLowerCase())) {
+          const el = document.activeElement;
+          if (el && (
+            ['input', 'textarea', 'select'].includes(el.tagName.toLowerCase()) ||
+            el.isContentEditable ||
+            (el.getAttribute('role') === 'textbox')
+          )) {
             return;
           }
 
